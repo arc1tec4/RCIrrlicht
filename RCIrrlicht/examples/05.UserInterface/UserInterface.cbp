@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Irrlicht Example 05 User Interface" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Windows">
+				<Option platforms="Windows;" />
+				<Option output="../../bin/Win32-gcc/UserInterface" prefix_auto="0" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../lib/Win32-gcc" />
+				</Linker>
+			</Target>
+			<Target title="Linux">
+				<Option platforms="Unix;" />
+				<Option output="../../bin/Linux/UserInterface" prefix_auto="0" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/include/freetype2" />
+					<Add directory="../../../../Box2d/box2d-main/include/box2d" />
+					<Add directory="../../../../irrBullet/irrBullet-master/include" />
+					<Add directory="../../../../../../../usr/include/irrlicht" />
+					<Add directory="../../../../../Downloads/bullet3-master/src" />
+					<Add directory="../../../../../../../usr/include/bullet" />
+					<Add directory="RealisticWaterSceneNode-master" />
+					<Add directory="../../../../irrBullet/irrBullet-master/src" />
+				</Compiler>
+				<Linker>
+					<Add option="-lSDL2 -lfreetype -lbox2d -lBullet3Collision -lBullet3Common -lBullet3Dynamics -lBullet3Geometry -lBulletCollision -lBulletDynamics -lBulletInverseDynamics -lBulletSoftBody -lLinearMath" />
+					<Add library="Xxf86vm" />
+					<Add library="GL" />
+					<Add library="X11" />
+					<Add directory="../../lib/Linux" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Windows;Linux;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-g" />
+			<Add option="-DRC_LINUX" />
+			<Add directory="../../include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lSDL2 -lfreetype -lbox2d -lBullet3Collision -lBullet3Common -lBullet3Dynamics -lBullet3Geometry -lBulletCollision -lBulletDynamics -lBulletInverseDynamics -lBulletSoftBody -lLinearMath" />
+			<Add library="Irrlicht" />
+		</Linker>
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBullet.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletBoxShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletBvhTriangleMeshShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCapsuleShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCollisionCallBackInformation.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCollisionObject.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCollisionObjectAffector.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCollisionObjectAffectorAttract.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCollisionObjectAffectorDelete.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCollisionShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletConeShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletConvexHullShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletCylinderShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletGImpactMeshShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletGhostObject.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletLiquidBody.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletMotionState.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletPhysicsDebug.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletRayCastVehicle.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletRigidBody.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletSoftBody.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletSphereShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletTriangleMeshShape.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletWorld.cpp" />
+		<Unit filename="../../../../irrBullet/irrBullet-master/src/irrBulletcommon.cpp" />
+		<Unit filename="RealisticWaterSceneNode-master/RealisticWater.cpp">
+			<Option target="Linux" />
+		</Unit>
+		<Unit filename="camera.h" />
+		<Unit filename="gui_freetype_font.cpp" />
+		<Unit filename="gui_freetype_font.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="rc_font.h" />
+		<Unit filename="rc_gfx.h" />
+		<Unit filename="rc_gfx3D.h" />
+		<Unit filename="rc_gfx_core.h" />
+		<Unit filename="rc_os_defines.h" />
+		<Unit filename="rc_stdlib.h" />
+		<Unit filename="rc_utf8.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
